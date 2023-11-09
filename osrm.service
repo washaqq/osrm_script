@@ -1,0 +1,13 @@
+[Unit]
+Description=OSRM Server Service (Custom)
+#After=network.target
+
+[Service]
+Type=forking
+User=osrm
+RemainAfterExit=yes
+WorkingDirectory=/home/osrm/
+ExecStart=/home/osrm/osrm_server.sh
+
+[Install]
+WantedBy=multi-user.target
